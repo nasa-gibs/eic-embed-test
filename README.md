@@ -1,5 +1,7 @@
 # EIC Embed Test
 
+- [`Live Application`](https://nasa-gibs.github.io/eic-embed-test/)
+
 ## Install
 
 ```bash
