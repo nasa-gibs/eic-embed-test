@@ -99,8 +99,8 @@ const sizes = [
 ]
 
 function App() {
-  const [selectedEnvironment, setSelectedEnvironment] = useState(environments[3]);
-  const [selectedScenario, setSelectedScenario] = useState(scenarios[scenarios.length -1]);
+  const [selectedEnvironment, setSelectedEnvironment] = useState(environments[2]);
+  const [selectedScenario, setSelectedScenario] = useState(scenarios[0]);
   const [selectedSize, setSelectedSize] = useState({
     height: 500,
     width: 700,
