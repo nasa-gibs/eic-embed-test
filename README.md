@@ -20,6 +20,13 @@ npm run dev
 
 Navigate to [`http://localhost:5173`](http://localhost:5173) in a browser.
 
+## Deploy
+
+```bash
+npm run predeploy
+npm run deploy
+```
+
 ## Notes
 
 - Testing the SIT environment will require VPN connection.
