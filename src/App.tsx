@@ -56,15 +56,54 @@ const scenarios = [
   {
     title: 'Sea Ice Antarctic Animation',
     url: '?v=-4171187.01916682,-4238559.180936186,4142545.3786389525,4188800.5389352706&p=antarctic&em=true&kiosk=true&eic=da&l=Land_Mask,AMSRU2_Sea_Ice_Concentration_12km(palette=blue_6)&lg=true'
+  },
+  {
+    title: 'Animation Test Subdaily',
+    url: '?v=-128.513507532474,37.36002303473546,-114.6517154141861,43.51841297062066&z=4&ics=true&ici=5&icd=10&as=2021-07-21-T00%3A30%3A00Z&ae=2021-07-21-T02%3A20%3A00Z&em=true&l=Coastlines_15m,GOES-West_ABI_GeoColor&lg=true&al=true&ab=on&t=2021-07-21-T00%3A40%3A00Z'
+  },
+  {
+    title: 'Animation Test Daily',
+    url: '?as=2023-08-01-T17%3A07%3A32Z&ae=2023-08-11-T17%3A07%3A32Z&l=Coastlines_15m,MODIS_Terra_CorrectedReflectance_TrueColor&lg=true&ab=on&t=2023-08-11-T17%3A07%3A32Z&em=true'
+  },
+  {
+    title: 'Compare Test',
+    url: '?v=-125.66524530471123,33.8184343312999,-116.92288203207836,50.065135576519594&em=true&l=Reference_Labels_15m,Reference_Features_15m,Coastlines_15m,MODIS_Aqua_CorrectedReflectance_Bands721,MODIS_Terra_CorrectedReflectance_TrueColor&lg=true&l1=Reference_Labels_15m,Reference_Features_15m,Coastlines_15m,MODIS_Aqua_CorrectedReflectance_Bands721,MODIS_Terra_CorrectedReflectance_TrueColor&lg1=true&ca=false&t=2021-07-09-T14%3A52%3A15Z&t1=2021-07-18-T14%3A52%3A15Z'
+  },
+  {
+    title: 'Event Test',
+    url: '?v=-103.50028271122204,10.26847172967436,-14.979785444452538,49.5955468174631&em=true&e=true&efs=false&efa=false&efd=2020-06-01,2020-11-30&efc=severeStorms&l=Coastlines_15m,BlueMarble_NextGeneration,MODIS_Terra_CorrectedReflectance_TrueColor&lg=true&t=2021-07-20-T15%3A00%3A46Z'
+  }
+]
+
+const sizes = [
+  {
+    title: 'Portrait Phone',
+    width: 414,
+    height: 896,
+  },
+  {
+    title: 'Landscape Phone',
+    width: 896,
+    height: 414,
+  },
+  {
+    title: 'Portrait Tablet',
+    width: 768,
+    height: 1024,
+  },
+  {
+    title: 'Landscape Tablet',
+    width: 1024,
+    height: 768,
   }
 ]
 
 function App() {
-  const [selectedEnvironment, setSelectedEnvironment] = useState(environments[2]);
-  const [selectedScenario, setSelectedScenario] = useState(scenarios[0]);
+  const [selectedEnvironment, setSelectedEnvironment] = useState(environments[3]);
+  const [selectedScenario, setSelectedScenario] = useState(scenarios[scenarios.length -1]);
   const [selectedSize, setSelectedSize] = useState({
     height: 500,
-    width: 1000,
+    width: 700,
   });
   const url = selectedEnvironment.url + selectedScenario.url;
 
@@ -111,6 +150,17 @@ function App() {
               </option>
             ))}
           </select>
+        </div>
+        <div className="size-selector">
+          {sizes.map((size) => (
+            <button
+              key={size.title}
+              className={`size-button ${selectedSize === size ? 'selected' : ''}`}
+              onClick={() => setSelectedSize({height: size.height, width: size.width})}
+            >
+              {size.title}
+            </button>
+          ))}
         </div>
         <div className="size-inputs">
             <label>
