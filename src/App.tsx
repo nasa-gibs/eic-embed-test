@@ -6,18 +6,18 @@ const environments = [
     title: 'Production',
     url: 'https://worldview.earthdata.nasa.gov/'
   },
-  {
-    title: 'UAT',
-    url: 'https://worldview.uat.earthdata.nasa.gov/'
-  },
-  {
-    title: 'SIT',
-    url: 'https://worldview.sit.earthdata.nasa.gov/'
-  },
-  {
-    title: 'Local',
-    url: 'http://localhost:3000/'
-  }
+  // {
+  //   title: 'UAT',
+  //   url: 'https://worldview.uat.earthdata.nasa.gov/'
+  // },
+  // {
+  //   title: 'SIT',
+  //   url: 'https://worldview.sit.earthdata.nasa.gov/'
+  // },
+  // {
+  //   title: 'Local',
+  //   url: 'http://localhost:3000/'
+  // }
 ];
 
 const scenarios = [
@@ -99,7 +99,7 @@ const sizes = [
 ]
 
 function App() {
-  const [selectedEnvironment, setSelectedEnvironment] = useState(environments[2]);
+  const [selectedEnvironment, setSelectedEnvironment] = useState(environments[0]);
   const [selectedScenario, setSelectedScenario] = useState(scenarios[0]);
   const [selectedSize, setSelectedSize] = useState({
     height: 500,
