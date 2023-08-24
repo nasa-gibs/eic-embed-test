@@ -7,14 +7,6 @@ const environments = [
     url: 'https://worldview.earthdata.nasa.gov/'
   },
   // {
-  //   title: 'UAT',
-  //   url: 'https://worldview.uat.earthdata.nasa.gov/'
-  // },
-  // {
-  //   title: 'SIT',
-  //   url: 'https://worldview.sit.earthdata.nasa.gov/'
-  // },
-  // {
   //   title: 'Local',
   //   url: 'http://localhost:3000/'
   // }
