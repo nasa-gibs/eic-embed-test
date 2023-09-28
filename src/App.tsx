@@ -66,8 +66,12 @@ const scenarios = [
     url: '?v=-103.50028271122204,10.26847172967436,-14.979785444452538,49.5955468174631&em=true&e=true&efs=false&efa=false&efd=2020-06-01,2020-11-30&efc=severeStorms&l=Coastlines_15m,BlueMarble_NextGeneration,MODIS_Terra_CorrectedReflectance_TrueColor&lg=true&t=2021-07-20-T15%3A00%3A46Z'
   },
   {
-    title: 'Tour Story Test',
+    title: 'Assessing Floodwaters Tour Story',
     url: '?em=true&v=-181.27301826448502,-69.19665203309799,172.63208132306409,88.85268113341039&l=Reference_Labels_15m(hidden),Reference_Features_15m(hidden),Coastlines_15m,MODIS_Combined_Flood_3-Day(disabled=3-4),MODIS_Combined_Flood_2-Day(hidden,disabled=3-4),Land_Water_Map,MODIS_Aqua_CorrectedReflectance_TrueColor(hidden),MODIS_Terra_CorrectedReflectance_TrueColor(hidden)&lg=true&tr=flood-product&t=2022-11-15-T00%3A00%3A00Z'
+  },
+  {
+    title: 'Atmospheric Rivers Tour Story',
+    url: '?em=true&v=-164.01576986935143,16.426986680574874,-83.14048698253546,52.526006177450554&l=Reference_Features_15m,Coastlines_15m,VIIRS_SNPP_CorrectedReflectance_TrueColor&lg=true&tr=atmospheric_rivers&t=2023-02-24-T10%3A00%3A00Z'
   }
 ]
 
